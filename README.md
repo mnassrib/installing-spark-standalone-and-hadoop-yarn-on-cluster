@@ -54,11 +54,48 @@
 ``hdpuser@master-node:~$ python --version`` --to check which version of python
 
 ![python-master-node](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-master-node.png)
+
 ![python-slave-node-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-node-1.png) 
 
+## 3- Installing Spark on both servers (master-node & slave-node-1)
+
+- Download Spark archive file "spark-2.4.5-bin-hadoop2.7.tar.gz", and follow installation steps:
+
+``hdpuser@master-node:~$ cd /bigdata``
+		
+- Extract the archive "spark-2.4.5-bin-hadoop2.7.tar.gz", 
+		
+``hdpuser@master-node:/bigdata$ tar -zxvf spark-2.4.5-bin-hadoop2.7.tar.gz``
+		
+- Setup Environment variables 
+
+``hdpuser@master-node:/bigdata$ cd``  --to move to your home directory
+
+``hdpuser@master-node:~$ vi .bashrc``  --add the below at the end of the file
+
+	# Setup SPARK Environment variables
+	export SPARK_HOME=/bigdata/spark-2.4.5-bin-hadoop2.7
+	export PATH=$PATH:$SPARK_HOME/bin
+	export CLASSPATH=$CLASSPATH:$SPARK_HOME/jars/*
+	export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
+	export PYTHONPATH=$PYTHONPATH:$SPARK_HOME/python/:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip
+	export SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
+	export SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
+
+	# Control Spark
+	alias Start_SPARK='$SPARK_HOME/sbin/start-all.sh;$SPARK_HOME/sbin/start-history-server.sh'
+	alias Stop_SPARK='$SPARK_HOME/sbin/stop-all.sh;$SPARK_HOME/sbin/stop-history-server.sh'
+
+	# Setup PYSPARK Environment variables
+	export PYSPARK_PYTHON=/bigdata/anaconda3/bin/python
+	export PYSPARK_DRIVER_PYTHON=/bigdata/anaconda3/bin/python
+
+``hdpuser@master-node:~$ source .bashrc`` --after save the .bashrc file, load it
 
 
-## 3- Installing Spark
+
+
+
 
 
 ##############################################
