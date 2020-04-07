@@ -30,7 +30,14 @@
 	Do you accept the license terms? [yes|no]
 	[no] >>> yes
 	
+	Anaconda3 will now be installed in this location:
+	/root/anaconda3
 	
+		- Press ENTER to confirm the location
+		- Press CTRL-C to abord the installation
+		- Or specify a different location below
+	
+	[/root/anaconda3] >>> /bigdata/anaconda3
 	
 		
 - Setup Environment variables
