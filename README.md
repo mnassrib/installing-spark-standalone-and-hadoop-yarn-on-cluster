@@ -1,10 +1,56 @@
 # Installing Spark on Hadoop Yarn Multi Node Cluster
 
-> This repository describes all required steps to install Spark on Hadoop Yarn multi node cluster.
+> This repository describes all the required steps to install Spark on Hadoop Yarn multi node cluster.
 
 > **To start this tutorial, we need a ready-made hadoop cluster. For this, we can provide the cluster that we described in detail in a previous tutorial: [Installing Hadoop on single node as well multi node cluster using Debian 9 Linux VMs][verifsudo].** 
 
 [verifsudo]: https://github.com/mnassrib/installing-hadoop-cluster
+
+
+
+
+## 1- Using Hadoop User		       	
+> login as hdpuser user
+
+``hdpuser@master-node:~$``
+
+## 2- Installing Anaconda on both servers (master-node & slave-node-1)	
+
+``hdpuser@master-node:~$ cd /bigdata``	       	
+
+- Download Anaconda version "Anaconda3-2020.02-Linux-x86_64.sh", and follow installation steps:
+
+``hdpuser@master-node:/bigdata$ bash Anaconda3-2020.02-Linux-x86_64.sh``
+		
+	In order to continue the installation process, please review the license
+	agreement.
+	please, press ENTER to continue
+	>>> yes
+	
+	Do you accept the license terms? [yes|no]
+	[no] >>> yes
+	
+	
+	
+		
+- Setup Environment variables
+		
+``hdpuser@master-node:/bigdata$ cd ~``
+
+``hdpuser@master-node:~$ vi .bashrc``  --add the below at the end of the file
+			
+	# User specific environment and startup programs
+	export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+	# Setup JAVA Environment variables
+	export JAVA_HOME=/bigdata/jdk1.8.0_241
+	export PATH=$PATH:$JAVA_HOME/bin
+			
+``hdpuser@master-node:~$ source .bashrc`` --load the .bashrc file
+
+
+
+## 3- Installing Spark
 
 
 ##############################################
