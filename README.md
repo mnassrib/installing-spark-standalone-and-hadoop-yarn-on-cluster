@@ -38,7 +38,6 @@
 		- Or specify a different location below
 	
 	[/root/anaconda3] >>> /bigdata/anaconda3
-	
 		
 - Setup Environment variables
 		
@@ -46,12 +45,9 @@
 
 ``hdpuser@master-node:~$ vi .bashrc``  --add the below at the end of the file
 			
-	# User specific environment and startup programs
-	export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-	# Setup JAVA Environment variables
-	export JAVA_HOME=/bigdata/jdk1.8.0_241
-	export PATH=$PATH:$JAVA_HOME/bin
+	# Setup Python & Anaconda Environment variables
+	export PYTHONPATH=/bigdata/anaconda3/bin
+	export PATH="/bigdata/anaconda3/bin:$PATH"
 			
 ``hdpuser@master-node:~$ source .bashrc`` --load the .bashrc file
 
