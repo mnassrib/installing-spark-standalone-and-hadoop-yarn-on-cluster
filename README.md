@@ -51,6 +51,11 @@
 			
 ``hdpuser@master-node:~$ source .bashrc`` --load the .bashrc file
 
+``hdpuser@master-node:~$ python --version`` --to check which version of python
+
+![python-master-node](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-master-node.png)
+![python-slave-node-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-node-1.png) 
+
 
 
 ## 3- Installing Spark
