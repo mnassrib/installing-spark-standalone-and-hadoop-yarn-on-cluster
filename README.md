@@ -26,12 +26,10 @@
 	agreement.
 	please, press ENTER to continue
 	>>> yes
-
-
+>
 	Do you accept the license terms? [yes|no]
 	[no] >>> yes
-
-
+>
 	Anaconda3 will now be installed in this location:
 	/root/anaconda3
 	
