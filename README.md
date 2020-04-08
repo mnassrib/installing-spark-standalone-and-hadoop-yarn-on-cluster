@@ -244,6 +244,48 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ![exp1application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1application.png)
 
+- Example 2:
+
+> The goal of this example is to count the occurrences of each word in a given text file. For this, let's write a python program and save it as "test_spark_yarn.py" into this directory "/home/hdpuser/Desktop/" on the master-node 
+
+	-------/home/hdpuser/Desktop/test_spark_yarn.py---------------------------------------------
+	from pyspark import SparkContext
+	sc = SparkContext(appName="WordCount")
+	input_file = sc.textFile("hdfs:///user/shakespeare.txt")
+	b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
+	b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
+	--------------------------------------------------------------------------------------------
+
+Download "shakespeare.txt" file that is the input file from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
+
+[shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
+
+Put the "shakespeare.txt" file in HDFS
+
+``hdpuser@master-node:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
+
+![inputfile](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/inputfile.png)
+
+
+```diff
+- /_\ Check in /home/hdpuser/Desktop/ of your workers if you already have the count_result.txt file.
+```
+
+
+spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/test_spark_yarn.py
+
+hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount.py
+
+
+
+
+``hdpuser@slave-node-1:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
+
+![exp1spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark1.png)
+![exp1spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark2.png)
+![exp1spark3](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark3.png)
+
+![exp1application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1application.png)
 
 ## Stop Spark
 			$Stop_SPARK
