@@ -147,7 +147,7 @@
 ``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-defaults.conf``  --copy the spark-defaults.conf file
 
 	spark.master 				yarn
-	spark.eventLog.enabled 				true
+	spark.eventLog.enabled 			true
 	spark.eventLog.dir			hdfs://master-node:9000/spark-history
 	spark.yarn.historyServer.address	master-node:19888/
 	spark.yarn.am.memory			512m
