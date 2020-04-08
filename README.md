@@ -90,7 +90,79 @@
 	
 ``hdpuser@master-node:~$ source .bashrc`` --after save the .bashrc file, load it
 
+- Add the attached Spark config files:
 
+``hdpuser@master-node:~$ cd $SPARK_HOME/conf``  --check the environment variables you just added
+
+-- Modify file: **spark-env.sh** 
+
+> *on master-node server* 
+
+``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
+
+	#IP for Local node
+	SPARK_LOCAL_IP=192.xxx.x.**1**
+	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
+	YARN_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
+	SPARK_EXECUTOR_CORES=1
+	SPARK_EXECUTOR_MEMORY=512m
+	SPARK_DRIVER_MEMORY=512m
+
+	SPARK_MASTER_HOST=192.xxx.x.1
+	SPARK_MASTER_PORT=6066
+	SPARK_MASTER_WEBUI_PORT=6064
+
+	SPARK_WORKER_PORT=7077
+	SPARK_WORKER_WEBUI_PORT=7074
+
+	#PYSPARK Environment variables
+	SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
+	SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
+
+> *on slave-node-1 server* 
+
+``hdpuser@slave-node-1:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
+
+	#IP for Local node
+	SPARK_LOCAL_IP=192.xxx.x.**2**
+	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
+	YARN_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
+	SPARK_EXECUTOR_CORES=1
+	SPARK_EXECUTOR_MEMORY=512m
+	SPARK_DRIVER_MEMORY=512m
+
+	SPARK_MASTER_HOST=192.xxx.x.1
+	SPARK_MASTER_PORT=6066
+	SPARK_MASTER_WEBUI_PORT=6064
+
+	SPARK_WORKER_PORT=7077
+	SPARK_WORKER_WEBUI_PORT=7074
+
+	#PYSPARK Environment variables
+	SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
+	SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
+
+
+``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-defaults.conf``  --copy the spark-defaults.conf file
+
+``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi slaves``  --copy the slaves file
+
+
+
+
+
+
+
+
+
+
+
+
+- Create the required directories on "Hadoop cluster" for "Spark"
+			
+``hdpuser@master-node:~$ hdfs dfs -mkdir /spark-history/``
+			
+``hdpuser@master-node:~$ hdfs dfs -mkdir -p /user/spark-2.4.5/jars/``
 
 
 
