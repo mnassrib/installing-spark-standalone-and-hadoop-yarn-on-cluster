@@ -238,7 +238,9 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ``hdpuser@slave-node-1:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
-
+![exp1spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark1.png)
+![exp1spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark2.png)
+![exp1spark3](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark3.png)
 
 ## Stop Spark
 			$Stop_SPARK
