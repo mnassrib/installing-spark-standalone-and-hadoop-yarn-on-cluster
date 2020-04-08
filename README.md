@@ -47,7 +47,7 @@
 			
 	# Setup Python & Anaconda Environment variables
 	export PYTHONPATH=/bigdata/anaconda3/bin
-	export PATH="/bigdata/anaconda3/bin:$PATH"
+	export PATH=/bigdata/anaconda3/bin:$PATH
 			
 ``hdpuser@master-node:~$ source .bashrc`` --load the .bashrc file
 
@@ -75,21 +75,19 @@
 
 	# Setup SPARK Environment variables
 	export SPARK_HOME=/bigdata/spark-2.4.5-bin-hadoop2.7
-	export PATH=$PATH:$SPARK_HOME/bin
-	export CLASSPATH=$CLASSPATH:$SPARK_HOME/jars/*
+	export PATH=$SPARK_HOME/bin:$PATH
+	export CLASSPATH=$SPARK_HOME/jars/*:$CLASSPATH
 	export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
-	export PYTHONPATH=$PYTHONPATH:$SPARK_HOME/python/:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip
-	export SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
-	export SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
 
 	# Control Spark
 	alias Start_SPARK='$SPARK_HOME/sbin/start-all.sh;$SPARK_HOME/sbin/start-history-server.sh'
 	alias Stop_SPARK='$SPARK_HOME/sbin/stop-all.sh;$SPARK_HOME/sbin/stop-history-server.sh'
 
 	# Setup PYSPARK Environment variables
+	export PYTHONPATH=$SPARK_HOME/python/:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$SPARK_HOME/python/lib/pyspark.zip:$PYTHONPATH
 	export PYSPARK_PYTHON=/bigdata/anaconda3/bin/python
 	export PYSPARK_DRIVER_PYTHON=/bigdata/anaconda3/bin/python
-
+	
 ``hdpuser@master-node:~$ source .bashrc`` --after save the .bashrc file, load it
 
 
