@@ -146,22 +146,22 @@
 
 ``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-defaults.conf``  --copy the spark-defaults.conf file
 
-	spark.master 						yarn
+	spark.master 				yarn
 	spark.eventLog.enabled 				true
-	spark.eventLog.dir					hdfs://master-node:9000/spark-history
+	spark.eventLog.dir			hdfs://master-node:9000/spark-history
 	spark.yarn.historyServer.address	master-node:19888/
-	spark.yarn.am.memory				512m
+	spark.yarn.am.memory			512m
 	spark.executor.memoryOverhead		1g
-	spark.history.provider				org.apache.spark.deploy.history.FsHistoryProvider
-	spark.history.ui.port				18080
+	spark.history.provider			org.apache.spark.deploy.history.FsHistoryProvider
+	spark.history.ui.port			18080
 	spark.history.fs.logDirectory		hdfs://master-node:9000/spark-history
-	spark.driver.cores					1
-	spark.driver.memory					512m
-	spark.executor.instances			1
-	spark.executor.memory				512m
-	spark.yarn.jars						hdfs://master-node:9000/user/spark-2.4.5/jars/*
+	spark.driver.cores			1
+	spark.driver.memory			512m
+	spark.executor.instances		1
+	spark.executor.memory			512m
+	spark.yarn.jars				hdfs://master-node:9000/user/spark-2.4.5/jars/*
 	spark.serializer                	org.apache.spark.serializer.KryoSerializer
-	spark.network.timeout				800
+	spark.network.timeout			800
 
 - Modify file: **slaves** on both servers
 
