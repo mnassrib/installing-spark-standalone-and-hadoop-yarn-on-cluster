@@ -232,7 +232,11 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ![webspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/webspark.png)
 
-			
+## 7- Running spark examples
+
+- Example 1:
+
+``hdpuser@slave-node-1:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
 
 
