@@ -214,6 +214,18 @@
 
 ``hdpuser@master-node:~$ Start_SPARK``
 
+![startspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/startspark.png)
+
+Using jps command to get all the details of the Java Virtual Machine Process Status:
+
+``hdpuser@master-node:~$ jps -m``
+
+![jpsmaster-node](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsmaster-node.png)
+
+``hdpuser@slave-node-1:~$ jps -m``
+
+![jpsslave-node-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsslave-node-1.png)
+
 ###### Default Web Interfaces
 
 	http://master-node:6064/
