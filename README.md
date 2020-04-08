@@ -228,7 +228,10 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ###### Default Web Interfaces
 
-	http://master-node:6064/
+> http://master-node:6064/
+
+![webspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/webspark.png)
+
 			
 
 
