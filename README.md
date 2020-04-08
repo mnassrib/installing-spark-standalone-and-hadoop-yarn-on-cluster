@@ -228,9 +228,13 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ###### Default Web Interfaces
 
-> http://master-node:6064/
+> Spark Master web: http://master-node:6064/
 
 ![webspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/webspark.png)
+
+> Spark History Server web: http://node-master:18080 
+
+![websparkmaster](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/websparkmaster.png)
 
 ## 7- Running spark examples
 
@@ -250,7 +254,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 	-------/home/hdpuser/Desktop/test_spark_yarn.py---------------------------------------------
 	from pyspark import SparkContext
-	sc = SparkContext(appName="WordCount")
+	sc = SparkContext(appName="testing")
 	input_file = sc.textFile("hdfs:///user/shakespeare.txt")
 	b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
 	b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
@@ -266,26 +270,22 @@ Put the "shakespeare.txt" file in HDFS
 
 ![inputfile](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/inputfile.png)
 
-
 ```diff
-- /_\ Check in /home/hdpuser/Desktop/ of your workers if you already have the count_result.txt file.
+- /_\ Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If the case overwrite it and submit the application.
 ```
 
+``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/test_spark_yarn.py``
+	
+![exp2spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark1.png)
+![exp2spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark2.png)
+![exp2spark3](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark3.png)
 
-spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/test_spark_yarn.py
+![exp2application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2application.png)
 
-hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount.py
+![exp2sparkjobs](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2sparkjobs.png)
 
+## 8- Stop Spark
 
+``hdpuser@master-node:~$ Stop_SPARK``
 
-
-``hdpuser@slave-node-1:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
-
-![exp1spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark1.png)
-![exp1spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark2.png)
-![exp1spark3](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark3.png)
-
-![exp1application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1application.png)
-
-## Stop Spark
-			$Stop_SPARK
+![stopspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/stopspark.png)
