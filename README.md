@@ -242,5 +242,8 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 ![exp1spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark2.png)
 ![exp1spark3](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark3.png)
 
+![exp1application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1application.png)
+
+
 ## Stop Spark
 			$Stop_SPARK
