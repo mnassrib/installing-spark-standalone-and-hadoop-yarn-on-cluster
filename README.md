@@ -184,7 +184,7 @@
 		<value>false</value>
 	</property>
 
-## 4- Create the needed directories on "Hadoop cluster" for "Spark" on master-node
+## 4- Create the needed directories on Hadoop cluster for Spark on master-node
 			
 ``hdpuser@master-node:~$ hdfs dfs -mkdir /spark-history/``
 			
@@ -194,22 +194,32 @@
 
 ## 5- Upload to hdfs the needed jars by Yarn & Spark
 
-> In order pyspark running correctly on yarn, it is needed to put the jar files to HDFS:
+```diff
+- In order pyspark running correctly on yarn, and after starting Hadoop and creating the above needed directories, it is needed to put the jar files to HDFS:
+```
+
+- Put jar files to HDFS
 
 ``hdpuser@master-node:~$ hdfs dfs -put $SPARK_HOME/jars/* /user/spark-2.4.5/jars/``
 
 ![jarfiles](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jarfiles.png)
 
+- Checking by running pyspark
 
+``hdpuser@master-node:~$ pyspark``
 
-############################################################################################	
-		upload to hdfs the needed jars by Yarn & SPARK
-		# Put jar to HDFS
-			hdfs dfs -put $SPARK_HOME/jars/* /user/spark-2.4.5/jars/
-############################################################################################
-		## Start Spark
-			Start_SPARK
-			http://master-node:6064/
+![launchpysparkshell](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/launchpysparkshell.png)
+		
+## 6- Start Spark
+
+``hdpuser@master-node:~$ Start_SPARK``
+
+###### Default Web Interfaces
+
+	http://master-node:6064/
 			
-		## Stop Spark
+
+
+
+## Stop Spark
 			$Stop_SPARK
