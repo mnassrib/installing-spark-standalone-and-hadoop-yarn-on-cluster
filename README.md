@@ -269,6 +269,17 @@ Put the "shakespeare.txt" file in HDFS
 
 ``hdpuser@master-node:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
 
+
+1. raisin
+0. pomme
+	* golden
+	- granny smith
+	+ boskoop
+0. abricot
+
+1291\. Signature du pacte fédéral Suisse
+
+
 ![inputfile](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/inputfile.png)
 
 ![Avertis] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
