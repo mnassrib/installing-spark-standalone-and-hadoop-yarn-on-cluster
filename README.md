@@ -289,6 +289,10 @@ b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 
 ![exp2sparkjobs](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2sparkjobs.png)
 
+5. Let's see the application results
+
+![exp2results](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2results.png)
+
 ## 8- Stop Spark
 
 ``hdpuser@master-node:~$ Stop_SPARK``
