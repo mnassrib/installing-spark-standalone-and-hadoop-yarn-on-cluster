@@ -194,7 +194,7 @@
 
 ## 5- Upload to hdfs the needed jars by Yarn & Spark
 
-![Avertis] As you can see from the **spark-defaults.conf** file, spar (pyspark) can only running correctly on yarn if: 
+![Avertis] As you can see from the **spark-defaults.conf** file, spark (pyspark) can only running correctly on yarn if: 
 
 	- starting Hadoop 
 	- creating the above needed directories 
