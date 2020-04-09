@@ -248,7 +248,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ![exp1application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1application.png)
 
-- Example 2: Counting the occurrences of each word in a document using pyspark programs 
+- Example 2: Counting the occurrences of each word in a document using pyspark program 
 
 > The goal of this example is to count the occurrences of each word in a given document. For this, let's write a python program and save it as "wordcount.py" into this directory "/home/hdpuser/Desktop/" on the master-node server
 
@@ -274,6 +274,12 @@ Put the "shakespeare.txt" file in HDFS
 ```diff
 - /_\ Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application.
 ```
+
+Le logo Markdown ![logo Markdown](markdown1.png "Markdown")
+apparaît parfois également ainsi ![autre variante][imgMD]
+
+[imgMD]: markdown2.png "Markdown"
+
 
 ``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/test_spark_yarn.py``
 	
