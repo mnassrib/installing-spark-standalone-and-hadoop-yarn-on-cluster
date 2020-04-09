@@ -263,11 +263,11 @@ b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lam
 b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 ~~~~~~~
 
-0. Download the input file "shakespeare.txt" from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
+2. Download the input file "shakespeare.txt" from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
 
 [shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
 
-0. Put the "shakespeare.txt" file in HDFS
+3. Put the "shakespeare.txt" file in HDFS
 
 ``hdpuser@master-node:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
 
@@ -275,7 +275,7 @@ b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 
 ![Avertis] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
 
-0. Submit application
+4. Submit application
 
 [avertis]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Avertis'
 
