@@ -261,11 +261,11 @@ b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lam
 b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 ~~~~~~~
 
-	* Download the input file "shakespeare.txt" from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
+* Download the input file "shakespeare.txt" from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
 
 [shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
 
-	* Put the "shakespeare.txt" file in HDFS
+* Put the "shakespeare.txt" file in HDFS
 
 ``hdpuser@master-node:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
 
