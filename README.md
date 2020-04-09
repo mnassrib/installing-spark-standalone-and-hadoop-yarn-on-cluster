@@ -276,7 +276,8 @@ Put the "shakespeare.txt" file in HDFS
 ```
 
 ![Markdown] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
-[markdown]: markdown1.png 'Markdown'
+
+[markdown]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Markdown'
 
 ``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/test_spark_yarn.py``
 	
