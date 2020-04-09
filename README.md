@@ -252,7 +252,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 > The goal of this example is to count the occurrences of each word in a given document. 
 
-1. Let's write a python program and save it as "wordcount.py" into this directory "/home/hdpuser/Desktop/" on the master-node server
+1. Let's write a python program and save it as ``wordcount.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-node server
 
 ~~~~~~~ { .python .numberLines startFrom="10" }
 ############## /home/hdpuser/Desktop/wordcount.py ##############
@@ -263,11 +263,11 @@ b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lam
 b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 ~~~~~~~
 
-2. Download the input file "shakespeare.txt" from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
+2. Download the input file ``shakespeare.txt`` from this [link][shakespearefile] and save it at ``/home/hdpuser/Downloads`` 
 
 [shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
 
-3. Put the "shakespeare.txt" file in HDFS
+3. Put the ``shakespeare.txt`` file in HDFS
 
 ``hdpuser@master-node:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
 
