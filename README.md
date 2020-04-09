@@ -260,6 +260,16 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 	b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 	--------------------------------------------------------------------------------------------
 
+~~~~~~~ { .python .numberLines startFrom="10" }
+#!/usr/bin/env python3
+from time import localtime
+heure = localtime().tm_hour
+if heure < 17:
+    print("Bonjour !")
+else:
+    print("Bonsoir !")
+~~~~~~~
+
 Download "shakespeare.txt" file that is the input file from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
 
 [shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
