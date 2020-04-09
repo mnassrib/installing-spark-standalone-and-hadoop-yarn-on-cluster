@@ -238,7 +238,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ## 7- Running spark examples
 
-- Example 1:
+- Example 1: The Spark installation package contains sample applications using jar files, like the parallel calculation of Pi.
 
 ``hdpuser@slave-node-1:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
@@ -248,21 +248,18 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ![exp1application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1application.png)
 
-- Example 2:
+- Example 2: Counting the occurrences of each word in a document using pyspark programs 
 
-> The goal of this example is to count the occurrences of each word in a given text file. For this, let's write a python program and save it as "test_spark_yarn.py" into this directory "/home/hdpuser/Desktop/" on the master-node 
+> The goal of this example is to count the occurrences of each word in a given document. For this, let's write a python program and save it as "wordcount.py" into this directory "/home/hdpuser/Desktop/" on the master-node server
 
-	-------/home/hdpuser/Desktop/test_spark_yarn.py---------------------------------------------
 ~~~~~~~ { .python .numberLines startFrom="10" }
+############## /home/hdpuser/Desktop/wordcount.py ##############
 from pyspark import SparkContext
-sc = SparkContext(appName="testing")
+sc = SparkContext(appName="Count words")
 input_file = sc.textFile("hdfs:///user/shakespeare.txt")
 b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
 b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 ~~~~~~~
-	--------------------------------------------------------------------------------------------
-
-
 
 Download "shakespeare.txt" file that is the input file from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
 
