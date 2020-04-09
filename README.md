@@ -275,11 +275,8 @@ Put the "shakespeare.txt" file in HDFS
 - /_\ Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application.
 ```
 
-Le logo Markdown ![logo Markdown](markdown1.png "Markdown")
-apparaît parfois également ainsi ![autre variante][imgMD]
-
-[imgMD]: markdown2.png "Markdown"
-
+![Markdown] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
+[markdown]: markdown1.png 'Markdown'
 
 ``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/test_spark_yarn.py``
 	
