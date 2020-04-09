@@ -194,9 +194,10 @@
 
 ## 5- Upload to hdfs the needed jars by Yarn & Spark
 
-```diff
-- In order pyspark running correctly on yarn, and after starting Hadoop and creating the above needed directories, it is needed to put the jar files to HDFS:
-```
+![Avertis] As you can see from the **spark-defaults.conf** file, pyspark can only running on yarn if: 
+	- starting Hadoop 
+	- creating the above needed directories 
+	- putting the jar files to HDFS
 
 - Put jar files to HDFS
 
