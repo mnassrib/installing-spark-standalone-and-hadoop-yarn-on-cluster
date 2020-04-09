@@ -250,7 +250,9 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 - Example 2: Counting the occurrences of each word in a document using pyspark program 
 
-> The goal of this example is to count the occurrences of each word in a given document. For this, let's write a python program and save it as "wordcount.py" into this directory "/home/hdpuser/Desktop/" on the master-node server
+> The goal of this example is to count the occurrences of each word in a given document. 
+
+1. Let's write a python program and save it as "wordcount.py" into this directory "/home/hdpuser/Desktop/" on the master-node server
 
 ~~~~~~~ { .python .numberLines startFrom="10" }
 ############## /home/hdpuser/Desktop/wordcount.py ##############
@@ -261,17 +263,19 @@ b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lam
 b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 ~~~~~~~
 
-* Download the input file "shakespeare.txt" from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
+0. Download the input file "shakespeare.txt" from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
 
 [shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
 
-* Put the "shakespeare.txt" file in HDFS
+0. Put the "shakespeare.txt" file in HDFS
 
 ``hdpuser@master-node:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
 
 ![inputfile](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/inputfile.png)
 
 ![Avertis] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
+
+0. Submit application
 
 [avertis]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Avertis'
 
