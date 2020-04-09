@@ -253,22 +253,16 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 > The goal of this example is to count the occurrences of each word in a given text file. For this, let's write a python program and save it as "test_spark_yarn.py" into this directory "/home/hdpuser/Desktop/" on the master-node 
 
 	-------/home/hdpuser/Desktop/test_spark_yarn.py---------------------------------------------
-	from pyspark import SparkContext
-	sc = SparkContext(appName="testing")
-	input_file = sc.textFile("hdfs:///user/shakespeare.txt")
-	b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
-	b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
+~~~~~~~ { .python .numberLines startFrom="10" }
+from pyspark import SparkContext
+sc = SparkContext(appName="testing")
+input_file = sc.textFile("hdfs:///user/shakespeare.txt")
+b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
+b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
+~~~~~~~
 	--------------------------------------------------------------------------------------------
 
-~~~~~~~ { .python .numberLines startFrom="10" }
-#!/usr/bin/env python3
-from time import localtime
-heure = localtime().tm_hour
-if heure < 17:
-    print("Bonjour !")
-else:
-    print("Bonsoir !")
-~~~~~~~
+
 
 Download "shakespeare.txt" file that is the input file from this [link][shakespearefile] and save it at "/home/hdpuser/Downloads" 
 
