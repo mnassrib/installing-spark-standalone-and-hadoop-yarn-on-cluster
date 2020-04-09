@@ -271,13 +271,9 @@ Put the "shakespeare.txt" file in HDFS
 
 ![inputfile](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/inputfile.png)
 
-```diff
-- /_\ Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application.
-```
+![Avertis] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
 
-![Markdown] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
-
-[markdown]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Markdown'
+[avertis]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Avertis'
 
 ``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/test_spark_yarn.py``
 	
