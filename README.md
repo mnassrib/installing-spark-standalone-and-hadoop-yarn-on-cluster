@@ -275,7 +275,7 @@ b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
 
 4. Submit application
 
-![Avertis] Before submitting the application, check in /home/hdpuser/Desktop/ of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
+![Avertis] Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
 
 [avertis]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Avertis'
 
