@@ -284,6 +284,8 @@ sc.stop()
 [avertis]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Avertis'
 
 ``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount.py``
+
+> It is not mandatory to mention ``--master yarn`` because it is set in **spark-defaults.conf** file.
 	
 ![exp2spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark1.png)
 ![exp2spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark2.png)
