@@ -261,8 +261,10 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 from pyspark import SparkContext
 sc = SparkContext(appName="Count words")
 input_file = sc.textFile("hdfs:///user/shakespeare.txt")
-b = input_file.flatMap(lambda x: x.split()).map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
-b.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
+words = input_file.flatMap(lambda x: x.split())
+count = words.map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
+count.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
+sc.stop()
 ~~~~~~~
 
 2. Download the input file ``shakespeare.txt`` from this [link][shakespearefile] and save it at ``/home/hdpuser/Downloads`` 
