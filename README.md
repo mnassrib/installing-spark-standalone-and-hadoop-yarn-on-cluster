@@ -242,7 +242,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 - Example 1: The Spark installation package contains sample applications using jar files, like the parallel calculation of Pi.
 
-``hdpuser@slave-node-1:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
+``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
 ![exp1spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark1.png)
 ![exp1spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark2.png)
