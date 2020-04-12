@@ -103,7 +103,7 @@
 ``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
 
 	#IP for Local node
-	SPARK_LOCAL_IP=192.xxx.x.**1**
+	SPARK_LOCAL_IP=192.xxx.x.1
 	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
 	YARN_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
 	SPARK_EXECUTOR_CORES=1
@@ -126,7 +126,7 @@
 ``hdpuser@slave-node-1:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
 
 	#IP for Local node
-	SPARK_LOCAL_IP=192.xxx.x.**2**
+	SPARK_LOCAL_IP=192.xxx.x.2
 	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
 	YARN_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
 	SPARK_EXECUTOR_CORES=1
