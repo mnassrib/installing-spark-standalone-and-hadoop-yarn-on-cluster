@@ -7,8 +7,6 @@
 [verifsudo]: https://github.com/mnassrib/installing-hadoop-cluster
 
 
-
-
 ## 1- Using Hadoop User		       	
 > login as hdpuser user
 
@@ -18,7 +16,9 @@
 
 ``hdpuser@master-node:~$ cd /bigdata``	       	
 
-- Download Anaconda version "Anaconda3-2020.02-Linux-x86_64.sh", and follow installation steps:
+- Download Anaconda version "[Anaconda3-2020.02-Linux-x86_64.sh][anaconda3]", and follow installation steps:
+
+[anaconda3]: https://www.anaconda.com/distribution/
 
 ``hdpuser@master-node:/bigdata$ bash Anaconda3-2020.02-Linux-x86_64.sh``
 		
