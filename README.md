@@ -214,7 +214,7 @@
 
 ![launchpysparkshell](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/launchpysparkshell.png)
 
-type exit() or press Ctrl+D to exit pyspark.
+Type exit() or press Ctrl+D to exit pyspark.
 		
 ## 6- Start Spark
 
