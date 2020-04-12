@@ -59,7 +59,9 @@
 
 ## 3- Installing Spark on both servers (master-node & slave-node-1)
 
-- Download Spark archive file "spark-2.4.5-bin-hadoop2.7.tar.gz", and follow installation steps:
+- Download Spark archive file "[spark-2.4.5-bin-hadoop2.7.tar.gz][spark]", and follow installation steps:
+
+[spark]: https://spark.apache.org/downloads.html
 
 ``hdpuser@master-node:~$ cd /bigdata``
 		
