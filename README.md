@@ -1,8 +1,8 @@
-# Installing Spark on Hadoop Yarn Multi Node Cluster
+# Installing Spark on Hadoop Yarn Multi-Node Cluster
 
-> This repository describes all the required steps to install Spark on Hadoop Yarn multi node cluster.
+> This repository describes all the required steps to install Spark on Hadoop Yarn multi-node cluster.
 
-> **To start this tutorial, we need a ready-made hadoop cluster. For this, we can provide the cluster that we described in detail in a previous tutorial: [Installing Hadoop on single node as well multi node cluster using Debian 9 Linux VMs][verifsudo].** 
+> **To start this tutorial, we need a ready-made hadoop cluster. For this, we can provide the cluster that we described in detail in a previous tutorial: [Installing Hadoop on single node as well multi-node cluster using Debian 9 Linux VMs][verifsudo].** 
 
 [verifsudo]: https://github.com/mnassrib/installing-hadoop-cluster
 
