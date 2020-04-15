@@ -78,6 +78,7 @@
 	# Setup SPARK Environment variables
 	export SPARK_HOME=/bigdata/spark-2.4.5-bin-hadoop2.7
 	export PATH=$SPARK_HOME/bin:$PATH
+	export PATH=$SPARK_HOME/sbin:$PATH
 	export CLASSPATH=$SPARK_HOME/jars/*:$CLASSPATH
 	export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
 
