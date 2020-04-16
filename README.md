@@ -6,13 +6,12 @@
 
 [hadooptuto]: https://github.com/mnassrib/installing-hadoop-cluster
 
-
 ## 1- Using Hadoop User		       	
 > login as hdpuser user
 
 ``hdpuser@master-node:~$``
 
-## 2- Installing Anaconda3 on both servers (master-node & slave-node-1)	
+## 2- Installing Anaconda3 on all the servers (master-node & slave-node-1 & slave-node-2)	
 
 ``hdpuser@master-node:~$ cd /bigdata``	       	
 
