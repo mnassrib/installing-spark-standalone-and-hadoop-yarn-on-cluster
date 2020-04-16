@@ -351,7 +351,7 @@ The jobs of a Spark application that is submitted on Yarn mode can be viewed usi
 
 ![exp1yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnapplicationjobs.png)
 
-Let's see the application results
+Let's see the application result
 
 ![exp1yarnresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnresults.png)
 
