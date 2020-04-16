@@ -383,11 +383,11 @@ sc.stop()
 
 ![exp2yarnsparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnsparkhistoryserver.png)
 
-![exp2sparkjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkjobs.png)
+![exp2yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnapplicationjobs.png)
 
 3. Let's see the application results
 
-![exp1yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2results.png)
+![exp2results](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2results.png)
 
 ## 8- Stop Spark
 
