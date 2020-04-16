@@ -347,11 +347,13 @@ sc.stop()
 
 The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Web UI. However, in the case of submission on Standalone mode, the Spark jobs are available on both manners : Spark Web UI and Spark History Server.
 
-
 ![exp1yarnsparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnsparkhistoryserver.png)
 
 ![exp1yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnapplicationjobs.png)
 
+Let's see the application results
+
+![exp1yarnresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnresults.png)
 
 - Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
@@ -387,7 +389,7 @@ sc.stop()
 
 3. Let's see the application results
 
-![exp2results](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2results.png)
+![exp2yarnresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnresults.png)
 
 ## 8- Stop Spark
 
