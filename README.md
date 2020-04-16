@@ -353,42 +353,27 @@ The jobs of a Spark application that is submitted on Yarn mode can be viewed usi
 ![exp1yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnapplicationjobs.png)
 
 
-- Example 2: Counting the occurrences of each word in a document using pyspark program 
+- Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
-> The goal of this example is to count the occurrences of each word in a given document. 
-
-1. Let's write a python program and save it as ``wordcount.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
+1. Let's write a python program and save it as ``wordcount_master_yarn.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
 
 ~~~~~~~ { .python .numberLines startFrom="10" }
-############## /home/hdpuser/Desktop/wordcount.py ##############
+############## /home/hdpuser/Desktop/wordcount_master_yarn.py ##############
 from pyspark import SparkContext
-sc = SparkContext(appName="Count words")
+sc = SparkContext(appName="Count words deplyed on Yarn mode")
 input_file = sc.textFile("hdfs:///user/shakespeare.txt")
 words = input_file.flatMap(lambda x: x.split())
 count = words.map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
-count.saveAsTextFile("file:///home/hdpuser/Desktop/count_result.txt")
+count.saveAsTextFile("file:///home/hdpuser/Desktop/count_result_yarn")
 sc.stop()
 ~~~~~~~
 
-2. Download the input file ``shakespeare.txt`` from this [link][shakespearefile] and save it at ``/home/hdpuser/Downloads`` 
+2. Submit application
 
-[shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
+| WARNING: Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your both workers if you already have the count_result_yarn directory. If that is the case overwrite it and submit the application!|
+| --- |
 
-3. Put the ``shakespeare.txt`` file in HDFS
-
-``hdpuser@master-namenode:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
-
-![inputfile](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/inputfile.png)
-
-4. Submit application
-
-![Avertis] Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
-
-[avertis]: https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/avertis.png 'Avertis'
-
-``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount.py``
-
-> It is not mandatory to mention ``--master yarn`` because it is set in **spark-defaults.conf** file.
+``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount_master_yarn.py``
 	
 ![exp2spark1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark1.png)
 ![exp2spark2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark2.png)
