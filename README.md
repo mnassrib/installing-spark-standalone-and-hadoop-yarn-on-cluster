@@ -11,7 +11,7 @@
 
 ``hdpuser@master-namenode:~$``
 
-## 2- Installing Anaconda3 on all the servers (master-namenode & slave-datanode-(1 & 2))	
+## 2- Installing Anaconda3 on all the servers (master-namenode & slave-datanode-1 & slave-datanode-2)	
 
 ``hdpuser@master-namenode:~$ cd /bigdata``	       	
 
@@ -58,7 +58,7 @@
 
 ![python-slave-datanode-2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-datanode-2.png) 
 
-## 3- Installing Spark on all the servers (master-namenode & slave-datanode-(1 & 2))
+## 3- Installing Spark on all the servers (master-namenode & slave-datanode-1 & slave-datanode-2)
 
 - Download Spark archive file "[spark-2.4.5-bin-hadoop2.7.tar.gz][spark]", and follow installation steps:
 
