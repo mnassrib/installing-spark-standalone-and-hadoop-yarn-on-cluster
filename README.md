@@ -11,7 +11,7 @@
 
 ``hdpuser@master-node:~$``
 
-## 2- Installing Anaconda3 on all the servers (master-node & slave-node-1 & slave-node-2)	
+## 2- Installing Anaconda3 on all the servers (master-node & slave-node-(1 & 2))	
 
 ``hdpuser@master-node:~$ cd /bigdata``	       	
 
