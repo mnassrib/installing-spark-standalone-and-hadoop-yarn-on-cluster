@@ -169,11 +169,10 @@
 	SPARK_WORKER_PORT=7077
 	SPARK_WORKER_WEBUI_PORT=7074
 
-- Modify file: **spark-defaults.conf** on both servers
+- Modify file: **spark-defaults.conf** on all the servers
 
 ``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-defaults.conf``  --copy the spark-defaults.conf file
 
-	spark.master 				yarn
 	spark.eventLog.enabled 			true
 	spark.eventLog.dir			hdfs://master-namenode:9000/spark-history
 	spark.yarn.historyServer.address	master-namenode:19888/
@@ -190,12 +189,13 @@
 	spark.serializer                	org.apache.spark.serializer.KryoSerializer
 	spark.network.timeout			800
 
-- Modify file: **slaves** on both servers
+- Modify file: **slaves** on all the servers (#*********#)
 
 ``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi slaves``  --copy the slaves file
 
 	master-namenode		#if this node is not a DataNode (slave), remove this line from the slaves file
 	slave-datanode-1
+	slave-datanode-2
 
 - Add the below config to **yarn-site.xml** file of Hadoop on both servers   
 		
