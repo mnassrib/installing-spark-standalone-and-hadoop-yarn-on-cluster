@@ -193,11 +193,11 @@
 
 ``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi slaves``  --copy the slaves file
 
-	master-namenode		#if this node is not a DataNode (slave), remove this line from the slaves file
+	master-namenode	  #remove this line from the slaves file if this node is not a DataNode (slave) 
 	slave-datanode-1
 	slave-datanode-2
 
-- Add the below config to **yarn-site.xml** file of Hadoop on both servers   
+- Add the below config to **yarn-site.xml** file of Hadoop on all the servers   
 		
 ``hdpuser@master-namenode:/bigdata/hadoop-3.1.2/etc/hadoop$ vi yarn-site.xml``  
 
