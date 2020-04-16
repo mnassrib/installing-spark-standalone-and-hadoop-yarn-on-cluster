@@ -254,11 +254,15 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ``hdpuser@master-namenode:~$ jps -m``
 
-![jpsmaster-node](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsmaster-node.png)
+![jpsmaster-namenode](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsmaster-namenode.png)
 
 ``hdpuser@slave-datanode-1:~$ jps -m``
 
-![jpsslave-node-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsslave-node-1.png)
+![jpsslave-datanode-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsslave-datanode-1.png)
+
+``hdpuser@slave-datanode-2:~$ jps -m``
+
+![jpsslave-datanode-2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsslave-datanode-2.png)
 
 ###### Default Web Interfaces
 
