@@ -52,11 +52,11 @@
 
 ``hdpuser@master-namenode:~$ python --version`` --to check which version of python
 
-![python-master-namenode](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-master-namenode.png)
+![python-master-namenode](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/python-master-namenode.png)
 
-![python-slave-datanode-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-datanode-1.png) 
+![python-slave-datanode-1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/python-slave-datanode-1.png) 
 
-![python-slave-datanode-2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-datanode-2.png) 
+![python-slave-datanode-2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/python-slave-datanode-2.png) 
 
 ## 3- Installing Spark on all the servers (master-namenode & slave-datanode-1 & slave-datanode-2)
 
@@ -220,7 +220,7 @@
 			
 ``hdpuser@master-namenode:~$ hdfs dfs -mkdir -p /user/spark-2.4.5/jars/``
 
-![directories](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/directories.png)
+![directories](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/directories.png)
 
 ## 5- Upload to HDFS the requirement jars by Yarn & Spark
 
@@ -234,13 +234,13 @@
 
 ``hdpuser@master-namenode:~$ hdfs dfs -put $SPARK_HOME/jars/* /user/spark-2.4.5/jars/``
 
-![jarfiles](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jarfiles.png)
+![jarfiles](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/jarfiles.png)
 
 - Check by running pyspark
 
 ``hdpuser@master-namenode:~$ pyspark``
 
-![launchpysparkshell](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/launchpysparkshell.png)
+![launchpysparkshell](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/launchpysparkshell.png)
 
 Type exit() or press Ctrl+D to exit pyspark.
 		
@@ -248,43 +248,104 @@ Type exit() or press Ctrl+D to exit pyspark.
 
 ``hdpuser@master-namenode:~$ Start_SPARK``
 
-![startspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/startspark.png)
+![startspark](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/startspark.png)
 
 Using jps command to get all the details of the Java Virtual Machine Process Status:
 
 ``hdpuser@master-namenode:~$ jps -m``
 
-![jpsmaster-namenode](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsmaster-namenode.png)
+![jpsmaster-namenode](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/jpsmaster-namenode.png)
 
 ``hdpuser@slave-datanode-1:~$ jps -m``
 
-![jpsslave-datanode-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsslave-datanode-1.png)
+![jpsslave-datanode-1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/jpsslave-datanode-1.png)
 
 ``hdpuser@slave-datanode-2:~$ jps -m``
 
-![jpsslave-datanode-2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsslave-datanode-2.png)
+![jpsslave-datanode-2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/jpsslave-datanode-2.png)
 
 ###### Default Web Interfaces
 
 > Spark Master web: http://master-namenode:6064/
 
-![webspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/webspark.png)
+![webspark](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/webspark.png)
 
 > Spark History Server web: http://node-master:18080 
 
-![websparkmaster](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/websparkmaster.png)
+![websparkmaster](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/websparkmaster.png)
 
-## 7- Running spark examples
+## 7- Running Spark examples
 
-- Example 1: The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=).
+### 7.1- On Standalone mode
+
+- Example 1: Calculation of ![pi]
+
+> The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=).
+
+``hdpuser@master-namenode:~$ spark-submit --deploy-mode client --master 'spark://master-namenode:6066' --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
+
+![exp1sparkstandalone1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkstandalone1.png)
+![exp1sparkstandalone2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkstandalone2.png)
+![exp1sparkstandalone3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkstandalone3.png)
+
+![exp1standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneapplication.png)
+![exp1standapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standapplicationdetails.png)
+
+- Example 2: Counting the occurrences of each word in a given document using pyspark program 
+
+> The goal of this example is to count the occurrences of each word in a given document. 
+
+1. Let's write a python program and save it as ``wordcount_master_standalone.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
+
+~~~~~~~ { .python .numberLines startFrom="10" }
+############## /home/hdpuser/Desktop/wordcount_master_standalone.py ##############
+from pyspark import SparkContext
+sc = SparkContext(appName="Count words deplyed on standalone mode")
+input_file = sc.textFile("hdfs:///user/shakespeare.txt")
+words = input_file.flatMap(lambda x: x.split())
+count = words.map(lambda x: (x,1)).reduceByKey(lambda a,b: a+b)
+count.saveAsTextFile("file:///home/hdpuser/Desktop/count_result_standalone")
+sc.stop()
+~~~~~~~
+
+2. Download the input file ``shakespeare.txt`` from this [link][shakespearefile] and save it at ``/home/hdpuser/Downloads`` 
+
+[shakespearefile]: https://raw.githubusercontent.com/bbejeck/hadoop-algorithms/master/src/shakespeare.txt
+
+3. Put the ``shakespeare.txt`` file into HDFS
+
+``hdpuser@master-namenode:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
+
+![inputfile](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/inputfile.png)
+
+4. Submit application
+
+| WARNING: Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your three workers if you already have the count_result_standalone directory. If that is the case overwrite it and submit the application!|
+| --- |
+
+``hdpuser@master-namenode:~$ spark-submit --deploy-mode client --master 'spark://master-namenode:6066' /home/hdpuser/Desktop/wordcount_master_standalone.py``
+
+![exp2sparkstandalone1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkstandalone1.png)
+![exp2sparkstandalone2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkstandalone2.png)
+![exp2sparkstandalone3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkstandalone3.png)
+
+![exp2standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplication.png)
+![exp2standapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standapplicationdetails.png)
+
+
+### 7.2- On Yarn mode
+
+- Example 1: Calculation of ![pi]
+
+> The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=).
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
-![exp1spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark1.png)
-![exp1spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark2.png)
-![exp1spark3](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark3.png)
+![exp1spark1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1spark1.png)
+![exp1spark2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1spark2.png)
+![exp1spark3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1spark3.png)
 
-![exp1application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1application.png)
+![exp1application](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1application.png)
 
 - Example 2: Counting the occurrences of each word in a document using pyspark program 
 
@@ -311,32 +372,32 @@ sc.stop()
 
 ``hdpuser@master-namenode:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
 
-![inputfile](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/inputfile.png)
+![inputfile](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/inputfile.png)
 
 4. Submit application
 
 ![Avertis] Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your both workers if you already have the count_result.txt file. If that is the case overwrite it and submit the application!
 
-[avertis]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Avertis'
+[avertis]: https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/avertis.png 'Avertis'
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount.py``
 
 > It is not mandatory to mention ``--master yarn`` because it is set in **spark-defaults.conf** file.
 	
-![exp2spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark1.png)
-![exp2spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark2.png)
-![exp2spark3](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2spark3.png)
+![exp2spark1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark1.png)
+![exp2spark2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark2.png)
+![exp2spark3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark3.png)
 
-![exp2application](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2application.png)
+![exp2application](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2application.png)
 
-![exp2sparkjobs](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2sparkjobs.png)
+![exp2sparkjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkjobs.png)
 
 5. Let's see the application results
 
-![exp2results](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp2results.png)
+![exp2results](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2results.png)
 
 ## 8- Stop Spark
 
 ``hdpuser@master-namenode:~$ Stop_SPARK``
 
-![stopspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/stopspark.png)
+![stopspark](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/stopspark.png)
