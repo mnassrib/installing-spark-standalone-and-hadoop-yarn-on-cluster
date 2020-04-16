@@ -330,22 +330,28 @@ sc.stop()
 ![exp2sparkstandalone3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkstandalone3.png)
 
 ![exp2standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplication.png)
-![exp2standapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standapplicationdetails.png)
+![exp2standaloneapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standapplicationdetails.png)
 
 
 ### 7.2- On Yarn mode
 
 - Example 1: Calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
-> The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
-
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
-![exp1spark1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1spark1.png)
-![exp1spark2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1spark2.png)
-![exp1spark3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1spark3.png)
+![exp1sparkyarn1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarn1.png)
+![exp1sparkyarn2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarn2.png)
+![exp1sparkyarn3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarn3.png)
 
-![exp1application](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1application.png)
+![exp1yarnapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnapplication.png)
+
+The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Web UI. However, in the case of submission on Standalone mode, the Spark jobs are available on both manners : Spark Web UI and Spark History Server.
+
+
+![exp1yarnsparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnsparkhistoryserver.png)
+
+![exp1yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnapplicationjobs.png)
+
 
 - Example 2: Counting the occurrences of each word in a document using pyspark program 
 
