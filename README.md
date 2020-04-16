@@ -375,17 +375,17 @@ sc.stop()
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount_master_yarn.py``
 	
-![exp2spark1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark1.png)
-![exp2spark2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark2.png)
-![exp2spark3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2spark3.png)
+![exp2sparkyarn1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkyarn1.png)
+![exp2sparkyarn2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkyarn2.png)
+![exp2sparkyarn3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkyarn3.png)
 
-![exp2application](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2application.png)
+![exp2yarnsparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnsparkhistoryserver.png)
 
 ![exp2sparkjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkjobs.png)
 
 5. Let's see the application results
 
-![exp2results](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2results.png)
+![exp1yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2results.png)
 
 ## 8- Stop Spark
 
