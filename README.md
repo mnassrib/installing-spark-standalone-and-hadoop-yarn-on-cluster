@@ -278,7 +278,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 - Example 1: The Spark installation package contains sample applications using jar files, like the parallel calculation of &pi.
 
-![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
+$ \sum_{\forall i}{x_i^{2}} $
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
