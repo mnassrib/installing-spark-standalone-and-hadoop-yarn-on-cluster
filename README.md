@@ -337,7 +337,7 @@ sc.stop()
 
 - Example 1: Calculation of ![pi]
 
-> The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=).
+> The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
