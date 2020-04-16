@@ -278,9 +278,9 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 ### 7.1- On Standalone mode
 
-- Example 1: Calculation of ![pi]
+- Example 1: Calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
-> The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=).
+> The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode client --master 'spark://master-namenode:6066' --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
@@ -335,7 +335,7 @@ sc.stop()
 
 ### 7.2- On Yarn mode
 
-- Example 1: Calculation of ![pi]
+- Example 1: Calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
 > The Spark installation package contains sample applications using jar files, like the parallel calculation of ![pi](http://www.sciweavers.org/tex2img.php?eq=%5Cpi&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
