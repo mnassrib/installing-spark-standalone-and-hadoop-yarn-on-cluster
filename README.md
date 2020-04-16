@@ -104,47 +104,70 @@
 
 ``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
 
+	#PYSPARK Environment variables
+	SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
+	SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
+
 	#IP for Local node
-	SPARK_LOCAL_IP=192.xxx.x.1
+	SPARK_LOCAL_IP=master-namenode #or 192.168.1.72
 	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
 	YARN_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
 	SPARK_EXECUTOR_CORES=1
 	SPARK_EXECUTOR_MEMORY=512m
 	SPARK_DRIVER_MEMORY=512m
 
-	SPARK_MASTER_HOST=192.xxx.x.1
+	SPARK_MASTER_HOST=master-namenode #or 192.168.1.72
 	SPARK_MASTER_PORT=6066
 	SPARK_MASTER_WEBUI_PORT=6064
 
 	SPARK_WORKER_PORT=7077
 	SPARK_WORKER_WEBUI_PORT=7074
-
-	#PYSPARK Environment variables
-	SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
-	SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
 
 > *on slave-datanode-1 server* 
 
 ``hdpuser@slave-datanode-1:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
 
+	#PYSPARK Environment variables
+	SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
+	SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
+
 	#IP for Local node
-	SPARK_LOCAL_IP=192.xxx.x.2
+	SPARK_LOCAL_IP=slave-datanode-1 #or 192.168.1.73
 	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
 	YARN_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
 	SPARK_EXECUTOR_CORES=1
 	SPARK_EXECUTOR_MEMORY=512m
 	SPARK_DRIVER_MEMORY=512m
 
-	SPARK_MASTER_HOST=192.xxx.x.1
+	SPARK_MASTER_HOST=master-namenode #or 192.168.1.72
 	SPARK_MASTER_PORT=6066
 	SPARK_MASTER_WEBUI_PORT=6064
 
 	SPARK_WORKER_PORT=7077
 	SPARK_WORKER_WEBUI_PORT=7074
 
+> *on slave-datanode-2 server* 
+
+``hdpuser@slave-datanode-2:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
+
 	#PYSPARK Environment variables
 	SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
 	SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
+
+	#IP for Local node
+	SPARK_LOCAL_IP=slave-datanode-2 #or 192.168.1.74
+	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
+	YARN_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
+	SPARK_EXECUTOR_CORES=1
+	SPARK_EXECUTOR_MEMORY=512m
+	SPARK_DRIVER_MEMORY=512m
+
+	SPARK_MASTER_HOST=master-namenode #or 192.168.1.72
+	SPARK_MASTER_PORT=6066
+	SPARK_MASTER_WEBUI_PORT=6064
+
+	SPARK_WORKER_PORT=7077
+	SPARK_WORKER_WEBUI_PORT=7074
 
 - Modify file: **spark-defaults.conf** on both servers
 
