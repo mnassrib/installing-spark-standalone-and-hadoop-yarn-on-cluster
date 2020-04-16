@@ -224,18 +224,11 @@
 
 ## 5- Upload to HDFS the requirement jars by Yarn & Spark
 
-![Avertis] As you can see from the **spark-defaults.conf** file, spark (pyspark) is running correctly on Yarn only if: 
-
-	- Hadoop is started 
-	- The above needed directories are created
-	- The jar files are sent to HDFS
-
 | WARNING: As you can see from the **spark-defaults.conf** file, spark (pyspark) is running correctly on Yarn only if:|
 | --- |
 	- Hadoop is started 
 	- The above needed directories are created
 	- The jar files are sent to HDFS
-| --- |
 
 - Put jar files to HDFS
 
