@@ -330,7 +330,7 @@ sc.stop()
 ![exp2sparkstandalone3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkstandalone3.png)
 
 ![exp2standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplication.png)
-![exp2standaloneapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standapplicationdetails.png)
+![exp2standaloneapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplicationdetails.png)
 
 
 ### 7.2- On Yarn mode
