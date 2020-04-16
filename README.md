@@ -275,8 +275,12 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 ![websparkmaster](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/websparkmaster.png)
 
 ## 7- Running spark examples
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
+config=TeX-MML-AM_CHTML"
+</script>
 
-- Example 1: The Spark installation package contains sample applications using jar files, like the parallel calculation of \Pi.
+- Example 1: The Spark installation package contains sample applications using jar files, like the parallel calculation of $\Pi$.
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
