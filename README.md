@@ -52,9 +52,11 @@
 
 ``hdpuser@master-node:~$ python --version`` --to check which version of python
 
-![python-master-node](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-master-node.png)
+![python-master-namenode](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-master-namenode.png)
 
-![python-slave-node-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-node-1.png) 
+![python-slave-datanode-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-datanode-1.png) 
+
+![python-slave-datanode-2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-datanode-2.png) 
 
 ## 3- Installing Spark on both servers (master-node & slave-node-1)
 
