@@ -9,17 +9,17 @@
 ## 1- Using Hadoop User		       	
 > login as hdpuser user
 
-``hdpuser@master-node:~$``
+``hdpuser@master-namenode:~$``
 
-## 2- Installing Anaconda3 on all the servers (master-node & slave-node-(1 & 2))	
+## 2- Installing Anaconda3 on all the servers (master-namenode & slave-datanode-(1 & 2))	
 
-``hdpuser@master-node:~$ cd /bigdata``	       	
+``hdpuser@master-namenode:~$ cd /bigdata``	       	
 
 - Download Anaconda version "[Anaconda3-2020.02-Linux-x86_64.sh][anaconda3]", and follow installation steps:
 
 [anaconda3]: https://www.anaconda.com/distribution/
 
-``hdpuser@master-node:/bigdata$ bash Anaconda3-2020.02-Linux-x86_64.sh``
+``hdpuser@master-namenode:/bigdata$ bash Anaconda3-2020.02-Linux-x86_64.sh``
 		
 	In order to continue the installation process, please review the license
 	agreement.
@@ -40,17 +40,17 @@
 		
 - Setup Environment variables
 		
-``hdpuser@master-node:/bigdata$ cd ~``
+``hdpuser@master-namenode:/bigdata$ cd ~``
 
-``hdpuser@master-node:~$ vi .bashrc``  --add the below at the end of the file
+``hdpuser@master-namenode:~$ vi .bashrc``  --add the below at the end of the file
 			
 	# Setup Python & Anaconda Environment variables
 	export PYTHONPATH=/bigdata/anaconda3/bin
 	export PATH=/bigdata/anaconda3/bin:$PATH
 			
-``hdpuser@master-node:~$ source .bashrc`` --load the .bashrc file
+``hdpuser@master-namenode:~$ source .bashrc`` --load the .bashrc file
 
-``hdpuser@master-node:~$ python --version`` --to check which version of python
+``hdpuser@master-namenode:~$ python --version`` --to check which version of python
 
 ![python-master-namenode](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-master-namenode.png)
 
@@ -58,23 +58,23 @@
 
 ![python-slave-datanode-2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/python-slave-datanode-2.png) 
 
-## 3- Installing Spark on both servers (master-node & slave-node-1)
+## 3- Installing Spark on all the servers (master-namenode & slave-datanode-(1 & 2))
 
 - Download Spark archive file "[spark-2.4.5-bin-hadoop2.7.tar.gz][spark]", and follow installation steps:
 
 [spark]: https://spark.apache.org/downloads.html
 
-``hdpuser@master-node:~$ cd /bigdata``
+``hdpuser@master-namenode:~$ cd /bigdata``
 		
 - Extract the archive "spark-2.4.5-bin-hadoop2.7.tar.gz", 
 		
-``hdpuser@master-node:/bigdata$ tar -zxvf spark-2.4.5-bin-hadoop2.7.tar.gz``
+``hdpuser@master-namenode:/bigdata$ tar -zxvf spark-2.4.5-bin-hadoop2.7.tar.gz``
 		
 - Setup Environment variables 
 
-``hdpuser@master-node:/bigdata$ cd``  --to move to your home directory
+``hdpuser@master-namenode:/bigdata$ cd``  --to move to your home directory
 
-``hdpuser@master-node:~$ vi .bashrc``  --add the below at the end of the file
+``hdpuser@master-namenode:~$ vi .bashrc``  --add the below at the end of the file
 
 	# Setup SPARK Environment variables
 	export SPARK_HOME=/bigdata/spark-2.4.5-bin-hadoop2.7
@@ -92,22 +92,22 @@
 	export PYSPARK_PYTHON=/bigdata/anaconda3/bin/python
 	export PYSPARK_DRIVER_PYTHON=/bigdata/anaconda3/bin/python
 	
-``hdpuser@master-node:~$ source .bashrc`` --after save the .bashrc file, load it
+``hdpuser@master-namenode:~$ source .bashrc`` --after save the .bashrc file, load it
 
 ### Add the attached Spark config files:
 
-``hdpuser@master-node:~$ cd $SPARK_HOME/conf``  --check the environment variables you just added
+``hdpuser@master-namenode:~$ cd $SPARK_HOME/conf``  --check the environment variables you just added
 
 - Modify file: **spark-env.sh** 
 
-> *on master-node server* 
+> *on master-namenode server* 
 
-``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
+``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
 
 	#IP for Local node
 	SPARK_LOCAL_IP=192.xxx.x.1
-	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
-	YARN_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
+	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
+	YARN_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
 	SPARK_EXECUTOR_CORES=1
 	SPARK_EXECUTOR_MEMORY=512m
 	SPARK_DRIVER_MEMORY=512m
@@ -123,14 +123,14 @@
 	SPARK_CONF_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/conf
 	SPARK_LOG_DIR=/bigdata/spark-2.4.5-bin-hadoop2.7/logs
 
-> *on slave-node-1 server* 
+> *on slave-datanode-1 server* 
 
-``hdpuser@slave-node-1:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
+``hdpuser@slave-datanode-1:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-env.sh``  --copy the spark-env.sh file
 
 	#IP for Local node
 	SPARK_LOCAL_IP=192.xxx.x.2
-	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
-	YARN_CONF_DIR=/bigdata/hadoop-3.1.1/etc/hadoop
+	HADOOP_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
+	YARN_CONF_DIR=/bigdata/hadoop-3.1.2/etc/hadoop
 	SPARK_EXECUTOR_CORES=1
 	SPARK_EXECUTOR_MEMORY=512m
 	SPARK_DRIVER_MEMORY=512m
@@ -148,35 +148,35 @@
 
 - Modify file: **spark-defaults.conf** on both servers
 
-``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-defaults.conf``  --copy the spark-defaults.conf file
+``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi spark-defaults.conf``  --copy the spark-defaults.conf file
 
 	spark.master 				yarn
 	spark.eventLog.enabled 			true
-	spark.eventLog.dir			hdfs://master-node:9000/spark-history
-	spark.yarn.historyServer.address	master-node:19888/
+	spark.eventLog.dir			hdfs://master-namenode:9000/spark-history
+	spark.yarn.historyServer.address	master-namenode:19888/
 	spark.yarn.am.memory			512m
 	spark.executor.memoryOverhead		1g
 	spark.history.provider			org.apache.spark.deploy.history.FsHistoryProvider
 	spark.history.ui.port			18080
-	spark.history.fs.logDirectory		hdfs://master-node:9000/spark-history
+	spark.history.fs.logDirectory		hdfs://master-namenode:9000/spark-history
 	spark.driver.cores			1
 	spark.driver.memory			512m
 	spark.executor.instances		1
 	spark.executor.memory			512m
-	spark.yarn.jars				hdfs://master-node:9000/user/spark-2.4.5/jars/*
+	spark.yarn.jars				hdfs://master-namenode:9000/user/spark-2.4.5/jars/*
 	spark.serializer                	org.apache.spark.serializer.KryoSerializer
 	spark.network.timeout			800
 
 - Modify file: **slaves** on both servers
 
-``hdpuser@master-node:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi slaves``  --copy the slaves file
+``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi slaves``  --copy the slaves file
 
-	master-node		#if this node is not a DataNode (slave), remove this line from the slaves file
-	slave-node-1
+	master-namenode		#if this node is not a DataNode (slave), remove this line from the slaves file
+	slave-datanode-1
 
 - Add the below config to **yarn-site.xml** file of Hadoop on both servers   
 		
-``hdpuser@master-node:/bigdata/hadoop-3.1.1/etc/hadoop$ vi yarn-site.xml``  
+``hdpuser@master-namenode:/bigdata/hadoop-3.1.2/etc/hadoop$ vi yarn-site.xml``  
 
 	<property>
 		<name>yarn.nodemanager.pmem-check-enabled</name>
@@ -188,11 +188,11 @@
 		<value>false</value>
 	</property>
 
-## 4- Create the needed directories on Hadoop cluster for Spark on master-node
+## 4- Create the needed directories on Hadoop cluster for Spark on master-namenode
 			
-``hdpuser@master-node:~$ hdfs dfs -mkdir /spark-history/``
+``hdpuser@master-namenode:~$ hdfs dfs -mkdir /spark-history/``
 			
-``hdpuser@master-node:~$ hdfs dfs -mkdir -p /user/spark-2.4.5/jars/``
+``hdpuser@master-namenode:~$ hdfs dfs -mkdir -p /user/spark-2.4.5/jars/``
 
 ![directories](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/directories.png)
 
@@ -206,13 +206,13 @@
 
 - Put jar files to HDFS
 
-``hdpuser@master-node:~$ hdfs dfs -put $SPARK_HOME/jars/* /user/spark-2.4.5/jars/``
+``hdpuser@master-namenode:~$ hdfs dfs -put $SPARK_HOME/jars/* /user/spark-2.4.5/jars/``
 
 ![jarfiles](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jarfiles.png)
 
 - Check by running pyspark
 
-``hdpuser@master-node:~$ pyspark``
+``hdpuser@master-namenode:~$ pyspark``
 
 ![launchpysparkshell](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/launchpysparkshell.png)
 
@@ -220,23 +220,23 @@ Type exit() or press Ctrl+D to exit pyspark.
 		
 ## 6- Start Spark
 
-``hdpuser@master-node:~$ Start_SPARK``
+``hdpuser@master-namenode:~$ Start_SPARK``
 
 ![startspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/startspark.png)
 
 Using jps command to get all the details of the Java Virtual Machine Process Status:
 
-``hdpuser@master-node:~$ jps -m``
+``hdpuser@master-namenode:~$ jps -m``
 
 ![jpsmaster-node](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsmaster-node.png)
 
-``hdpuser@slave-node-1:~$ jps -m``
+``hdpuser@slave-datanode-1:~$ jps -m``
 
 ![jpsslave-node-1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/jpsslave-node-1.png)
 
 ###### Default Web Interfaces
 
-> Spark Master web: http://master-node:6064/
+> Spark Master web: http://master-namenode:6064/
 
 ![webspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/webspark.png)
 
@@ -248,7 +248,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 - Example 1: The Spark installation package contains sample applications using jar files, like the parallel calculation of Pi.
 
-``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
+``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
 ![exp1spark1](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark1.png)
 ![exp1spark2](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/exp1spark2.png)
@@ -260,7 +260,7 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 
 > The goal of this example is to count the occurrences of each word in a given document. 
 
-1. Let's write a python program and save it as ``wordcount.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-node server
+1. Let's write a python program and save it as ``wordcount.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
 
 ~~~~~~~ { .python .numberLines startFrom="10" }
 ############## /home/hdpuser/Desktop/wordcount.py ##############
@@ -279,7 +279,7 @@ sc.stop()
 
 3. Put the ``shakespeare.txt`` file in HDFS
 
-``hdpuser@master-node:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
+``hdpuser@master-namenode:~$ hdfs dfs -put Downloads/shakespeare.txt /user/``
 
 ![inputfile](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/inputfile.png)
 
@@ -289,7 +289,7 @@ sc.stop()
 
 [avertis]: https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/avertis.png 'Avertis'
 
-``hdpuser@master-node:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount.py``
+``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount.py``
 
 > It is not mandatory to mention ``--master yarn`` because it is set in **spark-defaults.conf** file.
 	
@@ -307,6 +307,6 @@ sc.stop()
 
 ## 8- Stop Spark
 
-``hdpuser@master-node:~$ Stop_SPARK``
+``hdpuser@master-namenode:~$ Stop_SPARK``
 
 ![stopspark](https://github.com/mnassrib/installing-spark-on-hadoop-yarn-cluster/blob/master/images/stopspark.png)
