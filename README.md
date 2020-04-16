@@ -385,7 +385,7 @@ sc.stop()
 
 ![exp2sparkjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkjobs.png)
 
-5. Let's see the application results
+3. Let's see the application results
 
 ![exp1yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2results.png)
 
