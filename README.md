@@ -308,7 +308,12 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 ![exp1sparkstandalone2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkstandalone2.png)
 ![exp1sparkstandalone3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkstandalone3.png)
 
+The application is available at Spark Web UI into the Completed Applications section 
+
 ![exp1standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneapplication.png)
+
+&nbsp;
+
 ![exp1standapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standapplicationdetails.png)
 
 Let's see the application result
