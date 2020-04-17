@@ -262,7 +262,7 @@ In the literature and by searching the internet, we find several sites, articles
 
 ![launchpysparkshell](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/launchpysparkshell.png)
 
-Type exit() or press Ctrl+D to exit pyspark.
+To exit pyspark, type exit() or press Ctrl+D
 		
 ## 6- Start Spark
 
