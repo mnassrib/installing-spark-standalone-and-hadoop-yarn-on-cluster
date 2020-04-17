@@ -340,8 +340,9 @@ sc.stop()
 
 4. Submit application
 
-| WARNING: Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your three workers if you already have the count_result_standalone directory. If that is the case overwrite it and submit the application!|
-| --- |
+| :warning: WARNING          |
+|:---------------------------|
+| Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your three workers if you already have the count_result_standalone directory. If that is the case overwrite it and submit the application!      |
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode client --master 'spark://master-namenode:6066' /home/hdpuser/Desktop/wordcount_master_standalone.py``
 
