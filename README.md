@@ -228,7 +228,7 @@
   <thead>
     <tr>
       <td align="left">
-        :information_source: According to the **spark-defaults.conf** file, spark (pyspark) is running correctly on Yarn mode only if:
+        :information_source: According to the spark-defaults.conf file, spark (pyspark) is running correctly on Yarn mode only if:
       </td>
     </tr>
   </thead>
