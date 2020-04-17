@@ -224,11 +224,27 @@
 
 ## 5- Upload to HDFS the requirement jars by Yarn & Spark
 
-| WARNING: As you can see from the **spark-defaults.conf** file, spark (pyspark) is running correctly on Yarn only if:|
-| --- |
-	- Hadoop is started 
-	- The above needed directories are created
-	- The jar files are sent to HDFS
+<table>
+  <thead>
+    <tr>
+      <td align="left">
+        :information_source: According to the **spark-defaults.conf** file, spark (pyspark) is running correctly on Yarn mode only if:
+      </td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>Hadoop is started</li>
+          <li>The above needed directories are created</li>
+		  <li>The jar files are sent to HDFS</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 - Put jar files to HDFS
 
@@ -396,26 +412,3 @@ sc.stop()
 ``hdpuser@master-namenode:~$ Stop_SPARK``
 
 ![stopspark](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/stopspark.png)
-
-
-
-<table>
-  <thead>
-    <tr>
-      <td align="left">
-        :information_source: Information
-      </td>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <ul>
-          <li>Tis not true.</li>
-          <li>I won't explode.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
