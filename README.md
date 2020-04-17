@@ -310,7 +310,7 @@ Using jps command to get all the details on the Java Virtual Machine Process Sta
 
 &nbsp;
 
-The application is available at Spark Web UI into the "Completed Applications" section. 
+The application is available at the Spark Web UI into the "Completed Applications" section. 
 
 ![exp1standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneapplication.png)
 
@@ -367,7 +367,7 @@ sc.stop()
 
 &nbsp;
 
-The application is available at Spark Web UI into the "Completed Applications" section.
+The application is available at the Spark Web UI into the "Completed Applications" section.
 
 ![exp2standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplication.png)
 
