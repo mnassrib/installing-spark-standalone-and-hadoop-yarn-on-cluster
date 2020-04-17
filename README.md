@@ -194,8 +194,9 @@ In the literature and by searching the internet, we find several sites, articles
 
 - Modify file: **slaves** on only the master-namenode server
 
-| WARNING: The goal here is to configure in particular the slaves file on the master machine. Since the master-namenode orchestrates all the workers or slaves servers, it needs to know their hostnames by mentioning them in its slaves file. About the slaves files on the slave-datanode-1 and slave-datanode-2 servers, format by leaving them empty.|
-| --- |
+| :warning: WARNING          |
+|:---------------------------|
+| The goal here is to configure in particular the slaves file on the master machine. Since the master-namenode orchestrates all the workers or slaves servers, it needs to know their hostnames by mentioning them in its slaves file. About the slaves files on the slave-datanode-1 and slave-datanode-2 servers, format by leaving them empty.     |
 
 ``hdpuser@master-namenode:/bigdata/spark-2.4.5-bin-hadoop2.7/conf$ vi slaves``  --copy the slaves file
 
