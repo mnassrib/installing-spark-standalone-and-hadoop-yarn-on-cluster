@@ -366,7 +366,8 @@ sc.stop()
 
 ![exp1yarnapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnapplication.png)
 
-The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Web UI. However, in the case of submission on Standalone mode, the Spark jobs are available on both manners : Spark Web UI and Spark History Server.
+| :memo:        | The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Web UI. However, in the case of submission on Standalone mode, the Spark jobs are available on both manners : Spark Web UI and Spark History Server.       |
+|---------------|:------------------------|
 
 ![exp1yarnsparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnsparkhistoryserver.png)
 
