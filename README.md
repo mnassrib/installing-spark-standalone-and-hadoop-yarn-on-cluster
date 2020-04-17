@@ -396,3 +396,26 @@ sc.stop()
 ``hdpuser@master-namenode:~$ Stop_SPARK``
 
 ![stopspark](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/stopspark.png)
+
+
+
+<table>
+  <thead>
+    <tr>
+      <td align="left">
+        :information_source: Information
+      </td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>Tis not true.</li>
+          <li>I won't explode.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
