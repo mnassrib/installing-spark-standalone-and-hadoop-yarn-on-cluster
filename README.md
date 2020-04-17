@@ -394,9 +394,11 @@ The application is available at Spark Web UI into the Completed Applications sec
 
 &nbsp;
 
-The application can be viewed on the ResourceManager website
+The application can be viewed on the ResourceManager website.
 
 ![exp1yarnapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnapplication.png)
+
+&nbsp;
 
 | :memo:        | The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Web UI. However, in the case of submission on Standalone mode, the Spark jobs are available on both manners : Spark Web UI and Spark History Server.       |
 |---------------|:------------------------|
@@ -410,6 +412,8 @@ The application can be viewed on the ResourceManager website
 Let's see the application result
 
 ![exp1yarnresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnresults.png)
+
+&nbsp;
 
 - Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
@@ -440,7 +444,8 @@ sc.stop()
 
 &nbsp;
 
-The application is available on the ResourceManager website
+The application is available on the ResourceManager website.
+
 ![exp2yarnapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnapplication.png)
 
 &nbsp;
