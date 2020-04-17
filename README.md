@@ -370,6 +370,9 @@ sc.stop()
 The application is available at Spark Web UI into the Completed Applications section
 
 ![exp2standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplication.png)
+
+&nbsp;
+
 ![exp2standaloneapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplicationdetails.png)
 
 5. Let's see the application results
