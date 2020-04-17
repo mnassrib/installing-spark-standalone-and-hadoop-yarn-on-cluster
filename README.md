@@ -311,6 +311,10 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 ![exp1standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneapplication.png)
 ![exp1standapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standapplicationdetails.png)
 
+Let's see the application result
+
+![exp1standaloneresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneresults.png)
+
 - Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
 > The goal of this example is to count the occurrences of each word in a given document. 
@@ -353,6 +357,10 @@ sc.stop()
 ![exp2standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplication.png)
 ![exp2standaloneapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplicationdetails.png)
 
+5. Let's see the application results
+
+![exp2standaloneresults1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneresults1.png)
+![exp2standaloneresults2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneresults2.png)
 
 ### 7.2- On Yarn mode
 
