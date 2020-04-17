@@ -438,9 +438,18 @@ sc.stop()
 ![exp2sparkyarn2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkyarn2.png)
 ![exp2sparkyarn3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkyarn3.png)
 
+&nbsp;
+
+The application is available on the ResourceManager website
 ![exp2yarnapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnapplication.png)
 
+&nbsp;
+
+Since the application is submitted on Yarn mode, the Spark jobs can be viewed using only the Spark History Server to replace the Spark Web UI.
+
 ![exp2yarnsparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnsparkhistoryserver.png)
+
+&nbsp;
 
 ![exp2yarnapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnapplicationjobs.png)
 
