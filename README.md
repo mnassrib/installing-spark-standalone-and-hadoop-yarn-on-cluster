@@ -10,6 +10,7 @@ In the literature and by searching the internet, we find several sites, articles
 
 | :point_up:    | **To start this tutorial, we need a ready-to-use Hadoop cluster. For this, we can use the cluster that we created and described in a previous tutorial: [Installing Hadoop on single node as well multi-node cluster based on VMs running Debian 9 Linux][hadooptuto]. We're going to install Spark so it will support at the same time both modes (Standalone and YARN).** |
 |---------------|:------------------------|
+
 [hadooptuto]: https://github.com/mnassrib/installing-hadoop-cluster 
 
 ## 1- Using Hadoop User		       	
