@@ -308,6 +308,8 @@ Using jps command to get all the details of the Java Virtual Machine Process Sta
 ![exp1sparkstandalone2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkstandalone2.png)
 ![exp1sparkstandalone3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkstandalone3.png)
 
+&nbsp;
+
 The application is available at Spark Web UI into the Completed Applications section 
 
 ![exp1standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneapplication.png)
@@ -316,9 +318,13 @@ The application is available at Spark Web UI into the Completed Applications sec
 
 ![exp1standapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standapplicationdetails.png)
 
+&nbsp;
+
 Let's see the application result
 
 ![exp1standaloneresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneresults.png)
+
+&nbsp;
 
 - Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
@@ -359,6 +365,10 @@ sc.stop()
 ![exp2sparkstandalone2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkstandalone2.png)
 ![exp2sparkstandalone3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2sparkstandalone3.png)
 
+&nbsp;
+
+The application is available at Spark Web UI into the Completed Applications section
+
 ![exp2standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplication.png)
 ![exp2standaloneapplicationdetails](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneapplicationdetails.png)
 
@@ -366,6 +376,8 @@ sc.stop()
 
 ![exp2standaloneresults1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneresults1.png)
 ![exp2standaloneresults2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2standaloneresults2.png)
+
+&nbsp;
 
 ### 7.2- On Yarn mode
 
