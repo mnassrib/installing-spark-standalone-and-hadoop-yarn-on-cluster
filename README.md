@@ -393,8 +393,9 @@ sc.stop()
 
 2. Submit application
 
-| WARNING: Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your both workers if you already have the count_result_yarn directory. If that is the case overwrite it and submit the application!|
-| --- |
+| :warning: WARNING          |
+|:---------------------------|
+| Before submitting the application, check in ``/home/hdpuser/Desktop/`` of your both workers if you already have the count_result_yarn directory. If that is the case overwrite it and submit the application!      |
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn /home/hdpuser/Desktop/wordcount_master_yarn.py``
 	
