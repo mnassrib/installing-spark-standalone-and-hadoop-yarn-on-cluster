@@ -4,10 +4,6 @@
 
 In the literature and by searching the internet, we find several sites, articles, social networks as well as academic works that speak and describe in detail Hadoop and Spark frameworks. Unfortunately, we realize that all these tools provide powerful information only on the theoretical side. Passing to practice, we discover a lot of blockages because of the lack of practical information in the literature especially regarding the deployment of Spark applications in a cluster and how can interact with Hadoop. For this reasons, I would highlight these points by deploying very simple examples. This repository describes all the required steps to install Spark Standalone and Hadoop Yarn modes on multi-node cluster.
 
-> **To start this tutorial, we need a ready-to-use Hadoop cluster. For this, we can use the cluster that we created and described in a previous tutorial: [Installing Hadoop on single node as well multi-node cluster based on VMs running Debian 9 Linux][hadooptuto]. We're going to install Spark so it will support at the same time both modes (Standalone and YARN).** 
-
-[hadooptuto]: https://github.com/mnassrib/installing-hadoop-cluster
-
 | :point_up:    | **To start this tutorial, we need a ready-to-use Hadoop cluster. For this, we can use the cluster that we created and described in a previous tutorial: [Installing Hadoop on single node as well multi-node cluster based on VMs running Debian 9 Linux][hadooptuto]. We're going to install Spark so it will support at the same time both modes (Standalone and YARN).** |
 |---------------|:------------------------|
 
