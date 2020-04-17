@@ -270,7 +270,7 @@ To exit pyspark, type exit() or press Ctrl+D
 
 ![startspark](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/startspark.png)
 
-Using jps command to get all the details of the Java Virtual Machine Process Status:
+Using jps command to get all the details on the Java Virtual Machine Process Status:
 
 ``hdpuser@master-namenode:~$ jps -m``
 
