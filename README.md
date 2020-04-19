@@ -298,7 +298,7 @@ Using jps command to get all the details on the Java Virtual Machine Process Sta
 
 ### 7.1- On Standalone mode
 
-- Example 1: Calculation of Pi
+#### - Example 1: Calculation of Pi
 
 > The Spark installation package contains sample applications using jar files, like the parallel calculation of Pi
 
@@ -326,7 +326,7 @@ Let's see the application result
 
 &nbsp;
 
-- Example 2: Counting the occurrences of each word in a given document using pyspark program 
+#### - Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
 > The goal of this example is to count the occurrences of each word in a given document. 
 
@@ -384,9 +384,9 @@ The application is available at the Spark Web UI into the "Completed Application
 
 ### 7.2- On Yarn mode
 
-- Example 1: Calculation of Pi
+#### - Example 1: Calculation of Pi
 
-#### - Deploy on cluster mode
+##### - Deploy on cluster mode
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
@@ -417,7 +417,7 @@ Let's see the application result
 
 
 
-#### - Deploy on client mode
+##### - Deploy on client mode
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode client --master yarn --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
@@ -445,18 +445,9 @@ Let's see the application result
 
 ![exp1yarnclientresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnclientresults.png)
 
-
-
-
-
-
-
-
-
-
 &nbsp;
 
-- Example 2: Counting the occurrences of each word in a given document using pyspark program 
+#### - Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
 1. Let's rewrite a the python program and save it as ``wordcount_master_yarn.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
 
