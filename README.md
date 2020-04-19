@@ -222,7 +222,9 @@ In the literature and by searching the internet, we find several sites, articles
 
 ## 4- Create the needed directories on Hadoop cluster for Spark on master-namenode server
 
-- ``hdpuser@master-namenode:~$ Start_HADOOP``
+- Start Hadoop 
+ 
+``hdpuser@master-namenode:~$ Start_HADOOP``
 
 ![starthadoop](https://github.com/mnassrib/installing-hadoop-cluster/blob/master/images/starthadoop.png)
 
