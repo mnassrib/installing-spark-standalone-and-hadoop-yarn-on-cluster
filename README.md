@@ -310,7 +310,10 @@ Using jps command to get all the details on the Java Virtual Machine Process Sta
 
 &nbsp;
 
-The application is available at the Spark Web UI into the "Completed Applications" section. 
+| :memo:        | In submission on Standalone mode cases, the Spark jobs can be viewed using both manners: Spark Master Web UI or Spark History Server. However, jobs of a Spark application that is submitted on Yarn mode can be viewed using only the Spark History Server to replace the Spark Master Web UI.|
+|---------------|:------------------------|
+
+The application is available at the Spark Master Web UI into the "Completed Applications" section. 
 
 ![exp1standaloneapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1standaloneapplication.png)
 
@@ -404,6 +407,11 @@ The application can be viewed on the ResourceManager website.
 
 | :memo:        | The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Master Web UI. However, in the case of submission on Standalone mode, the Spark jobs can be viewed using both manners : Spark Master Web UI and Spark History Server. |
 |---------------|:------------------------|
+
+| :memo:        | Remember that Spark application jobs submitted on Yarn mode can be viewed using only the Spark History Server to replace the Spark Master Web UI.|
+|---------------|:------------------------|
+
+The application is available at Spark History Server. 
 
 ![exp1yarnclustersparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnclustersparkhistoryserver.png)
 
