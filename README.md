@@ -298,7 +298,7 @@ Using jps command to get all the details on the Java Virtual Machine Process Sta
 
 ### 7.1- On Standalone mode
 
-#### - Example 1: Calculation of Pi
+#### 7.1.1- Example 1: Calculation of Pi
 
 > The Spark installation package contains sample applications using jar files, like the parallel calculation of Pi
 
@@ -326,7 +326,7 @@ Let's see the application result
 
 &nbsp;
 
-#### - Example 2: Counting the occurrences of each word in a given document using pyspark program 
+#### 7.1.2- Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
 > The goal of this example is to count the occurrences of each word in a given document. 
 
@@ -384,7 +384,7 @@ The application is available at the Spark Web UI into the "Completed Application
 
 ### 7.2- On Yarn mode
 
-#### - Example 1: Calculation of Pi
+#### 7.2.1- Example 1: Calculation of Pi
 
 ##### - Deploy on cluster mode
 
@@ -414,7 +414,6 @@ The application can be viewed on the ResourceManager website.
 Let's see the application result
 
 ![exp1yarnclusterresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnclusterresults.png)
-
 
 
 ##### - Deploy on client mode
@@ -447,7 +446,7 @@ Let's see the application result
 
 &nbsp;
 
-#### - Example 2: Counting the occurrences of each word in a given document using pyspark program 
+#### 7.2.2- Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
 1. Let's rewrite a the python program and save it as ``wordcount_master_yarn.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
 
