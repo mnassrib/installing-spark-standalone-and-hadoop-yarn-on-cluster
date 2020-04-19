@@ -448,7 +448,7 @@ Let's see the application result
 
 #### 7.2.2- Example 2: Counting the occurrences of each word in a given document using pyspark program 
 
-1. Let's rewrite a the python program and save it as ``wordcount_master_yarn.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
+1. Let's rewrite the python program and save it as ``wordcount_master_yarn.py`` into this directory ``/home/hdpuser/Desktop/`` on the master-namenode server
 
 ~~~~~~~ { .python .numberLines startFrom="10" }
 ############## /home/hdpuser/Desktop/wordcount_master_yarn.py ##############
