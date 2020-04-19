@@ -386,6 +386,8 @@ The application is available at the Spark Web UI into the "Completed Application
 
 - Example 1: Calculation of Pi
 
+> __Deploy on cluster mode__
+
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
 ![exp1sparkyarn1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarn1.png)
@@ -412,6 +414,9 @@ The application can be viewed on the ResourceManager website.
 Let's see the application result
 
 ![exp1yarnresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnresults.png)
+
+> __Deploy on client mode__
+
 
 &nbsp;
 
