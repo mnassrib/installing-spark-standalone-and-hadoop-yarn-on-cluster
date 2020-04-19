@@ -386,7 +386,7 @@ The application is available at the Spark Web UI into the "Completed Application
 
 - Example 1: Calculation of Pi
 
-__**Deploy on cluster mode**__
+_**Deploy on cluster mode**
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
