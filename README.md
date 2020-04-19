@@ -405,9 +405,6 @@ The application can be viewed on the ResourceManager website.
 
 &nbsp;
 
-| :memo:        | The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Master Web UI. However, in the case of submission on Standalone mode, the Spark jobs can be viewed using both manners : Spark Master Web UI and Spark History Server. |
-|---------------|:------------------------|
-
 | :memo:        | Remember that Spark application jobs submitted on Yarn mode can be viewed using only the Spark History Server to replace the Spark Master Web UI.|
 |---------------|:------------------------|
 
