@@ -390,6 +390,41 @@ The application is available at the Spark Web UI into the "Completed Application
 
 ``hdpuser@master-namenode:~$ spark-submit --deploy-mode cluster --master yarn --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
 
+![exp1sparkyarncluster1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarncluster1.png)
+![exp1sparkyarncluster2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarncluster2.png)
+![exp1sparkyarncluster3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarncluster3.png)
+
+&nbsp;
+
+The application can be viewed on the ResourceManager website.
+
+![exp1yarnclusterapplication](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnclusterapplication.png)
+
+&nbsp;
+
+| :memo:        | The jobs of a Spark application that is submitted on Yarn mode can be viewed using the Spark History Server to replace the Spark Web UI. However, in the case of submission on Standalone mode, the Spark jobs are available on both manners : Spark Web UI and Spark History Server.       |
+|---------------|:------------------------|
+
+![exp1yarnclustersparkhistoryserver](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnclustersparkhistoryserver.png)
+
+&nbsp;
+
+![exp1yarnclusterapplicationjobs](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnclusterapplicationjobs.png)
+
+Let's see the application result
+
+![exp1yarnclusterresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnclusterresults.png)
+
+
+
+
+
+
+
+#### - Deploy on client mode
+
+``hdpuser@master-namenode:~$ spark-submit --deploy-mode client --master yarn --class org.apache.spark.examples.SparkPi /bigdata/spark-2.4.5-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.5.jar 10``		
+
 ![exp1sparkyarn1](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarn1.png)
 ![exp1sparkyarn2](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarn2.png)
 ![exp1sparkyarn3](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1sparkyarn3.png)
@@ -415,7 +450,13 @@ Let's see the application result
 
 ![exp1yarnresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp1yarnresults.png)
 
-> __Deploy on client mode__
+
+
+
+
+
+
+
 
 
 &nbsp;
