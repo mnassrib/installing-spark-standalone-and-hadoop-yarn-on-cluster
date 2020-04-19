@@ -294,7 +294,7 @@ Using jps command to get all the details on the Java Virtual Machine Process Sta
 
 ![websparkmaster](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/websparkmaster.png)
 
-## 7- Running Spark examples
+## 7- Launching Spark examples
 
 ### 7.1- On Standalone mode
 
