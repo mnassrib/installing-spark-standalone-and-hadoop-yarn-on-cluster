@@ -508,8 +508,12 @@ Since the application is submitted on Yarn mode, the Spark jobs can be viewed us
 
 ![exp2yarnresults](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/exp2yarnresults.png)
 
-## 8- Stop Spark
+## 8- Stop Spark & Hadoop
 
 ``hdpuser@master-namenode:~$ Stop_SPARK``
 
 ![stopspark](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/stopspark.png)
+
+``hdpuser@master-namenode:~$ Stop_HADOOP``
+
+![stophadoop](https://github.com/mnassrib/installing-spark-standalone-and-hadoop-yarn-on-cluster/blob/master/images/stophadoop.png)
